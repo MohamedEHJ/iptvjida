@@ -104,6 +104,7 @@ def monitor_links(m3u_file_path, frame_position=2000):
             
             if success:
                 print(f"Lien {video_url} valide et image capturée.")
+                send_telegram_message(f"Lien {video_url} valide et image capturée.")
             else:
                 message = f"Lien {video_url} valide, mais image non valide."
                 send_telegram_message(message)
